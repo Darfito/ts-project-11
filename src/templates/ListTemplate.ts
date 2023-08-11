@@ -24,7 +24,7 @@ export default class ListTemplate implements DOMList {
 
       // buat li
       fullList.list.forEach(item => {
-        const li = document.createElement("li") as HTMLLIElement
+        const li = document.createElement("li") as HTMLLIElement;
         li.className = "item"
 
         // buat input
@@ -44,6 +44,7 @@ export default class ListTemplate implements DOMList {
         const label = document.createElement("label") as HTMLLabelElement
         label.htmlFor = item.id
         label.textContent = item.item
+        li.append(label);
 
         // buat button hapus
         const button = document.createElement("button") as HTMLButtonElement
